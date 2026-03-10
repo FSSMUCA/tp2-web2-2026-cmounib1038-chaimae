@@ -1,0 +1,16 @@
+let nombres =[0, NaN, Infinity, -Infinity, 42, 3.14, Number.MAX_SAFE_INTEGER + 1, -0];
+for (let v of nombres) {
+
+  if (Number.isNaN(v)) console.log(v + " -> INVALIDE");
+
+  else if (!Number.isFinite(v)) console.log(v + " -> INFINI");
+
+  else if (v === 0 && 1/v === -Infinity) console.log(v + " -> ZERO NEGATIF");
+
+  else if (Number.isInteger(v) && Number.isSafeInteger(v)) console.log(v + " -> ENTIER SUR");
+
+  else if (Number.isInteger(v)) console.log(v + " -> ENTIER HORS LIMITES");
+
+  else console.log(v + " -> DECIMAL");
+
+}
